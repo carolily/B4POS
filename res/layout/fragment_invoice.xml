@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#e1e1e1">
+    
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_margin="20dp">
+        
+        <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="条码 :"
+        android:textSize="30dp" />
+
+        <EditText
+            android:id="@+id/barcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="6925303739430"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+        
+          <Button
+        android:id="@+id/query"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查询"
+        android:textSize="30dp"/>
+           <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="清除"
+        android:textSize="30dp"/>
+    
+    </LinearLayout>
+    
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_weight="1">
+    </ListView>
+    
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_margin="20dp">
+        
+        <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="总 计 :"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="0.0"
+        android:gravity="right"
+        android:textSize="40dp" />
+    </LinearLayout>
+      
+</LinearLayout>

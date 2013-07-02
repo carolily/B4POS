@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+         <Button
+                android:id="@+id/buttonLeft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/buttonRight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Button" />
+            
+             <Button
+                android:id="@+id/buttonRight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Button" 
+                style="@style/flatButton" 
+                android:background="@drawable/flat_button"
+                android:drawableLeft="@drawable/menu_icon_invoice" />
+             
+              <Button
+                android:id="@+id/buttonRight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Button"
+                style="@style/HightButton"
+                /> 
+    </LinearLayout>
+    
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="0dip"
+    android:orientation="horizontal" 
+    android:layout_weight="1" 
+    >
+
+    <!-- 通过android:name 名字建立与类关系  -->
+
+  
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="cn.bluedrum.b4pos.InvoiceFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" 
+        android:layout_weight="1"
+        />
+    
+     <fragment
+        android:id="@+id/fragment2"
+        android:name="cn.bluedrum.b4pos.MenuFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" 
+        android:layout_weight="1 "/>
+
+</LinearLayout>
+
+</LinearLayout>

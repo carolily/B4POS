@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- 系统设置界面需要要到的数组 -->
+	<string-array name="pos_types">
+		<item>超市</item>
+		<item>婚纱</item>
+		<item>便利店</item>
+		<item>面包店</item>
+		<item>咖啡店</item>	
+	</string-array>
+	<string-array name="pos_type_values">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>	
+	</string-array>
+	
+</resources>

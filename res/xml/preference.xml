@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+    <EditTextPreference android:title="@string/db_path" android:key="db_path" android:summary="@string/db_path_summary" android:defaultValue="/sdcard/b4pos/b4pos.db"/>
+    <ListPreference android:key="pos_type" android:title="POS 类型" 
+        android:enabled="true"
+        android:entries="@array/pos_types" 
+         android:entryValues="@array/pos_type_values" 
+        />
+    
+
+</PreferenceScreen>

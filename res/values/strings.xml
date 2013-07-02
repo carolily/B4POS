@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">B4POS</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="pos_system">Cloud POS system</string>
+    <string name="db_path">database path</string>
+    <string name="db_path_summary">Database sdcard path</string>
+
+</resources>
