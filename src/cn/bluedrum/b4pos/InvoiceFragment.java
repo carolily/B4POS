@@ -130,7 +130,7 @@ private ArrayList<HashMap<String,Object>> listData  = null;
          */
 		listAdapter = new MySimpleAdapter(getActivity(), listData, R.layout.list_item, 
 				/* 简单指明哪一个内容与哪一个界面id对应*/
-				new String[]{"name","unit","price"},new int[]{R.id.name,R.id.unit,R.id.price});
+				new String[]{"name","unit","price","quatity"},new int[]{R.id.name,R.id.unit,R.id.price,R.id.quatity});
 		
 		
 		listView = (ListView)view.findViewById(R.id.listView1);
@@ -176,7 +176,7 @@ private ArrayList<HashMap<String,Object>> listData  = null;
   			
   			//node1.put("name", "商品1");
   			
-  			
+  			node1.put("quatity", "1");
   			
   			
   			node1.put("price", result.getString(result.getColumnIndex("UnitPrice")));
@@ -217,12 +217,33 @@ private ArrayList<HashMap<String,Object>> listData  = null;
 			barcodeView.setText("");
 	         break; 
 		case R.id.add:
+		{//同样商品新增一个数量
+			int index = (Integer)v.getTag();
+			HashMap<String,Object> node = listData.get(index);
+			
+			int q = Integer.parseInt((String) node.get("quatity"));
+			q++;
+			 total += Float.parseFloat((String) node.get("price"));
+			 
+			 totalView.setText(Float.toString(total));
+		  		
+		     node.put("quatity", Integer.toString(q));		
+		  		
+		  	 listAdapter.notifyDataSetChanged(); //通知界面更新
+		}
 			break;
 		case R.id.fire:
 		{//删除某一项
 			int index = (Integer)v.getTag();
 			
-			Utils.showMessage(getActivity(),"remove line"+index);
+			HashMap<String,Object> node = listData.get(index);
+			
+			int q = Integer.parseInt((String) node.get("quatity"));
+			
+			total -= q * Float.parseFloat((String) node.get("price"));
+			totalView.setText(Float.toString(total));
+			
+			//Utils.showMessage(getActivity(),"remove line"+index);
 			listData.remove(index) ;
 			listAdapter.notifyDataSetChanged();
 		}	
@@ -270,6 +291,10 @@ private ArrayList<HashMap<String,Object>> listData  = null;
 			   //为每一行按钮设置不同的tag，以便在点击时判断是哪一行。
 			   btn.setTag(position);
 			   btn.setOnClickListener(InvoiceFragment.this);
+			   
+			   Button btnAdd=(Button) v.findViewById(R.id.add);
+			   btnAdd.setTag(position);
+			   btnAdd.setOnClickListener(InvoiceFragment.this);
 			   
 			   return v;
 		  }
