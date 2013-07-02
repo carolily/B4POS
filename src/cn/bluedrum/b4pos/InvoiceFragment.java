@@ -283,6 +283,7 @@ private ArrayList<HashMap<String,Object>> listData  = null;
 			
 		}
 		
+		//每次在创建一行时调用这个方法
 		@Override
 		  public View getView(int position, View convertView, ViewGroup parent) {
 		   // TODO Auto-generated method stub
