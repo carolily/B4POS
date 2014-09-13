@@ -35,12 +35,15 @@
         android:layout_height="wrap_content"
         android:text="查询"
         android:textSize="30dp"/>
+
            <Button
         android:id="@+id/clear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="清除"
         android:textSize="30dp"/>
+
+     
     
     </LinearLayout>
     
@@ -51,7 +54,7 @@
         android:layout_height="wrap_content" 
         android:layout_weight="1">
     </ListView>
-    
+        
      <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" 
@@ -81,14 +84,14 @@
             android:layout_marginBottom="20dp" >
 
             <Button
-                android:id="@+id/buttonLeft"
+                android:id="@+id/saveInvoice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:text="@string/saveInvoice" />
 
             <Button
-                android:id="@+id/buttonRight"
+                android:id="@+id/pay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

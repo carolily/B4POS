@@ -12,18 +12,16 @@
      android:orientation="horizontal" >
 
             <Button
-                android:id="@+id/buttonLeft"
+                android:id="@+id/btnth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-               
-                android:text="1\nseat" />
+                android:text="1\n餐台" />
 
-            <Button
-                android:id="@+id/buttonRight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                
-                android:text="2\nseat" />
+            <TextView
+                android:id="@+id/textpeo"
+                android:layout_width="113dp"
+                android:layout_height="match_parent"
+                android:text="TextView" />
 
             <TextView
                 android:id="@+id/textView1"
@@ -31,13 +29,6 @@
                 android:layout_height="wrap_content"
                 android:text="" 
                 android:layout_weight="1"/>
-            
-             <Button
-                android:id="@+id/buttonRight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                
-                android:text="all\nseat" />
              
              <Button
                  style="@style/HightButton"
@@ -61,6 +52,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:numColumns="3" 
+            android:orientation="vertical"
+            android:scrollbarAlwaysDrawHorizontalTrack="true"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:scrollbars="horizontal|vertical" 
+
         android:background="#e1e1e1" >
     </GridView>
 

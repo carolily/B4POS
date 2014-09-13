@@ -7,6 +7,6 @@
     <string name="pos_system">Cloud POS system</string>
     <string name="db_path">database path</string>
     <string name="db_path_summary">Database sdcard path</string>
-     <string name="saveInvoice">Save</string>
-      <string name="pay">Pay</string>
+     <string name="saveInvoice">买单</string>
+      <string name="pay">提交</string>
 </resources>

@@ -57,7 +57,7 @@
           android:id="@+id/fire"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="Fire" 
+          android:text="-" 
           android:layout_gravity="center_vertical" />
 
 </LinearLayout>
